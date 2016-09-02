@@ -17,7 +17,7 @@ module ActiveAdmin
                 (
                   image_tag("aml/flags/#{locale.to_s}.png", alt: locale.to_s, title: locale.to_s) +
                   ' ' +
-                  content_for(block || attr)
+                  content_for(@collection[0], block || attr)
                 ).html_safe
               end
             end
